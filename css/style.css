@@ -1,0 +1,138 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-dark-white: #e7e6e1;
+  --color-light-white: #f7f6e7;
+  --color-yellow: #fcd134;
+  --color-dark-yellow: #ffff6a;
+  --color-light-yellow: #ffff8d;
+  --color-gray: #939597;
+  --color-dark-gray: #616161;
+  --color-ornage: #f2a154;
+  --color-red: #e84545;
+  --color-blue: #00589b;
+  --color-navy: #2b2e4a;
+  --color-black: #000000;
+  --color-green: #7eaf34;
+  --color-light-green: #68b68e;
+  --color-dark-green: #314e52;
+  --color-brown: #a3623b;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 24px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Font family */
+  --font-family-arch: "Archivo Black", sans-serif;
+  --font-family-nanum: "Nanum Gothic", sans-serif;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 250ms;
+}
+
+body {
+  background: url("../img/home-background.png") center/cover no-repeat;
+  font-family: "Inconsolata", monospace;
+  margin: 0;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-red);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  margin: 15px 0;
+  color: var(--color-blue);
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  margin: 10px 0;
+  color: var(--color-dark-green);
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  margin: 4px 0;
+  color: var(--color-black);
+}
+
+section {
+  margin: 30px 40px;
+}
+
+/* Header */
+#header {
+  margin: 50px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--color-green);
+  border-radius: 20px;
+}
+
+#navbar {
+  
+}
+
+.navbar__menu {
+  display: flex;
+  margin: 20px 80px;
+  justify-content: space-between;
+  max-width: 1082px;~
+}
+
+.navbar__menu button {
+  border: dashed 1px var(--color-black);
+  padding: 20px 30px;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu i {
+  padding-right: 8px;
+}
