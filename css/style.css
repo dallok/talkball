@@ -1,7 +1,7 @@
 /* Global */
 :root {
   /* Color */
-  --color-white: #ffffff;
+  --color-white: #fefefe;
   --color-dark-white: #e7e6e1;
   --color-light-white: #f7f6e7;
   --color-yellow: #fcd134;
@@ -16,13 +16,15 @@
   --color-black: #000000;
   --color-green: #7eaf34;
   --color-light-green: #68b68e;
-  --color-dark-green: #314e52;
+  --color-dark-green: #008003;
   --color-brown: #a3623b;
+  --color-purple: #c45eff;
+  --color-pink: #e79a8b;
 
   /* Font size */
   --font-large: 48px;
   --font-medium: 24px;
-  --font-regular: 18px;
+  --font-regular: 20px;
   --font-small: 16px;
   --font-micro: 14px;
 
@@ -39,7 +41,7 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  --animation-duration: 250ms;
+  --animation-duration: 200ms;
 }
 
 body {
@@ -47,6 +49,7 @@ body {
   font-family: "Inconsolata", monospace;
   margin: 0;
   cursor: default;
+  height: 100%;
 }
 
 a {
@@ -109,30 +112,162 @@ section {
 /* Header */
 #header {
   margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 0;
-  text-align: center;
-  background-color: var(--color-green);
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-#navbar {
-  
+#header .section__container {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-dark-green);
+  opacity: 0.9;
+  border-radius: 20px;
+  box-shadow: 10px 10px 6px -6px #777;
+}
+
+.header__title {
+  width: 700px;
+}
+
+.section__container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar__menu {
   display: flex;
-  margin: 20px 80px;
   justify-content: space-between;
-  max-width: 1082px;~
+  margin: 20px 0px;
 }
 
 .navbar__menu button {
-  border: dashed 1px var(--color-black);
+  border: solid 1px var(--color-black);
+  background-color: var(--color-light-yellow);
   padding: 20px 30px;
-  font-size: var(--font-medium);
+  font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
+  box-shadow: 5px 5px 6px -6px #777;
+}
+
+.navbar__menu button:hover {
+  background-color: var(--color-dark-green);
+  color: white;
+  transition: all var(--animation-duration) ease;
+  transform: scale(1.1);
+}
+
+.navbar__menu button:hover i {
+  color: var(--color-yellow);
+  transform: rotate(-20deg);
 }
 
 .navbar__menu i {
   padding-right: 8px;
+}
+
+/* Chatbox */
+
+#chatbox {
+  margin: auto;
+  height: 100%;
+}
+
+.chat__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fefefe;
+  width: 1100px;
+  height: 800px;
+  box-shadow: 10px 10px 6px -6px #777;
+  border: solid 1px var(--color-black);
+  overflow-y: scroll;
+}
+
+.chat__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: solid 1px var(--color-black);
+  background-color: var(--color-light-yellow);
+  border: solid 1px var(--color-black);
+}
+
+.chat__top i {
+  font-size: 24px;
+  margin-left: 10px;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.chat {
+  display: flex;
+  margin: 20px 30px;
+}
+
+.chat__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.chat__speechbubble {
+  background-color: var(--color-gray);
+  padding: 20px;
+  border-radius: 20px;  
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 130px;
+}
+
+.chat:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.first-chat {
+  margin-top: 40px;
+}
+
+.last-chat {
+  margin-bottom: 40px;
+}
+
+.chat__text {
+  display: inline;
+  font-size: var(--font-medium);
+  max-width: 100%;
+}
+
+.chat__speechbubble i {
+  color: var(--color-yellow);
+  font-size: var(--font-regular);
+}
+
+.chat__speechbubble i:hover {
+  color: var(--color-dark-white);
+  font-size: var(--font-regular);
+  cursor: pointer;
+  transform: rotate(-20deg);
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  border-top: solid 1px var(--color-black);
+  margin-top: 50px;
+  padding: 20px;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-medium);
 }
