@@ -33,23 +33,37 @@
   --weight-semi-bold: 600;
   --weight-regular: 400;
 
-  /* Font family */
-  --font-family-arch: "Archivo Black", sans-serif;
-  --font-family-nanum: "Nanum Gothic", sans-serif;
-
+  
   /* Size */
   --size-border-radius: 4px;
 
   /* Animation */
   --animation-duration: 200ms;
 }
+@font-face {
+  src: url("Krungthep.ttf");
+  font-family: 'kung';
+}
+
+html {
+  width: 100%;
+  padding: 80px;
+}
 
 body {
   background: url("../img/home-background.png") center/cover no-repeat;
-  font-family: "Inconsolata", monospace;
+  font-family: "kung", monospace;
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   cursor: default;
-  height: 100%;
+  font-family: 'kung';
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -105,60 +119,85 @@ p {
   color: var(--color-black);
 }
 
-section {
-  margin: 30px 40px;
-}
-
 /* Header */
 #header {
-  margin: 50px;
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 0;
+  padding: 0;
   display: flex;
   justify-content: center;
+  height: auto;
+  position: relative;
+  max-width: 80%;
+  height: auto;
 }
 
 #header .section__container {
-  width: 800px;
   display: flex;
   justify-content: center;
-  background-color: var(--color-dark-green);
-  opacity: 0.9;
-  border-radius: 20px;
-  box-shadow: 10px 10px 6px -6px #777;
+  margin: 0;
+  max-width: 100%;
+  width: 715px;
+  height: auto;
 }
 
 .header__title {
-  width: 700px;
+  max-width: 90%;
+  height: auto;
+  margin: 0;
+  }
+
+.header__logo {
+  max-width: 25%;
+  width: 130px;
+  height: auto;
+  margin: 0;
+  position: relative;
+  top: -10px;
 }
 
-.section__container {
-  max-width: 1100px;
+#navbar {
   margin-left: auto;
   margin-right: auto;
+  padding: 0;
+  max-width: 70%;
+  width: 900px;
+}
+
+#navbar .section__container {
+  margin-right: 0px;
+  padding: 0px;
+  max-width: 100%;
 }
 
 .navbar__menu {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0px;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.menu {
+  margin-left: 16px;
 }
 
 .navbar__menu button {
-  border: solid 1px var(--color-black);
-  background-color: var(--color-light-yellow);
-  padding: 20px 30px;
+  background-color: var(--color-light-white);
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
   font-size: var(--font-regular);
-  font-weight: var(--weight-semi-bold);
-  box-shadow: 5px 5px 6px -6px #777;
+  border-radius: 5px;
+  border: solid 1px var(--color-dark-green);
+  box-shadow: 2px 2px var(--color-gray);
 }
 
 .navbar__menu button:hover {
-  background-color: var(--color-dark-green);
-  color: white;
+  color: var(--color-white);
+  background-color: var(--color-blue);
   transition: all var(--animation-duration) ease;
   transform: scale(1.1);
+  
 }
 
 .navbar__menu button:hover i {
@@ -171,65 +210,50 @@ section {
 }
 
 /* Chatbox */
-
 #chatbox {
-  margin: auto;
-  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  min-width: 900px;
+  height: 50%;
 }
 
 .chat__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-between;
+  margin: 0;
   background-color: #fefefe;
-  width: 1100px;
-  height: 800px;
   box-shadow: 10px 10px 6px -6px #777;
   border: solid 1px var(--color-black);
   overflow-y: scroll;
 }
 
-.chat__top {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  border-bottom: solid 1px var(--color-black);
-  background-color: var(--color-light-yellow);
-  border: solid 1px var(--color-black);
-}
-
-.chat__top i {
-  font-size: 24px;
-  margin-left: 10px;
-  color: var(--color-black);
-  cursor: pointer;
-}
-
 .chat {
   display: flex;
   margin: 20px 30px;
+  max-width: 100%;
 }
 
 .chat__avatar {
-  width: 150px;
-  height: 150px;
+  max-width: 20%;
+  width: 100px;
+  height: auto;
   border-radius: 50%;
   margin: 0 20px;
 }
 
 .chat__speechbubble {
+  max-width: 50%;
   background-color: var(--color-gray);
   padding: 20px;
   border-radius: 20px;  
-  display:flex;
-  align-items: center;
+  display: inline-block;
   flex-wrap: wrap;
-  width: 500px;
-  height: 130px;
+  max-width: 60%;
+  height: auto;
 }
 
 .chat:nth-child(even) {
@@ -246,8 +270,8 @@ section {
 
 .chat__text {
   display: inline;
-  font-size: var(--font-medium);
-  max-width: 100%;
+  font-size: var(--font-regular);
+  max-width: 70%;
 }
 
 .chat__speechbubble i {
@@ -264,10 +288,13 @@ section {
 
 /* Footer */
 #footer {
+  max-width: 70%;
+  height: auto;
+  margin: auto;
   text-align: center;
   border-top: solid 1px var(--color-black);
-  margin-top: 50px;
-  padding: 20px;
-  font-weight: var(--weight-bold);
-  font-size: var(--font-medium);
+  margin-top: 40px;
+  padding: 10px;
+  font-weight: var(--weight-regular);
+  font-size: var(--font-regular);
 }
