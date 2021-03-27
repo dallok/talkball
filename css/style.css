@@ -44,6 +44,7 @@ html {
 	width: 100%;
 	padding: 60px;
 	padding-bottom: 0;
+  
 }
 
 body {
@@ -55,7 +56,7 @@ body {
 	margin-right: auto;
 	cursor: default;
 	font-family: "kung";
-	height: 100vh;
+	height: 90%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -140,16 +141,9 @@ p {
 }
 
 .header__logo img:hover {
-  -webkit-animation: rotation 0.5s  linear;
+  transform: rotate(20deg);
+  transition: all var(--animation-duration) ease;
 }
-	@-webkit-keyframes rotation {
-		from {
-			-webkit-transform: rotate(0deg);
-		}
-		to {
-			-webkit-transform: rotate(360deg);
-		}
-	}
 
 
 .header__title {
@@ -200,7 +194,7 @@ p {
 #chatbox {
 	margin: 0 auto;
 	padding: 0;
-	width: 85%;
+	width: 90%;
 	height: 55%;
 }
 
@@ -209,10 +203,14 @@ p {
 	width: 100%;
 	height: 10%;
 	display: flex;
-	padding: 0px 5px;
+	padding: 10px 5px;
 	align-items: center;
 	box-shadow: 10px 10px 6px -6px #777;
 	border: solid 1px var(--color-black);
+}
+
+.chat__top i {
+  cursor: pointer;
 }
 
 .chat__top i {
@@ -230,6 +228,9 @@ p {
 	box-shadow: 10px 10px 6px -6px #777;
 	border: solid 1px var(--color-black);
 	overflow-y: scroll;
+}
+.dark {
+  background-color: var(--color-black);
 }
 
 .chat {
