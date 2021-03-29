@@ -75,7 +75,7 @@ p {
 
 html {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	padding: 0 60px;
 }
 
@@ -83,7 +83,7 @@ body {
 	font-family: "Inconsolata", monospace;
 	background: url("../img/home-background.png") center/cover no-repeat;
 	margin: 0;
-	height: 95%;
+	height: 100%;
 	cursor: default;
 	display: flex;
 	flex-direction: column;
@@ -298,13 +298,12 @@ body {
 @media (max-width: 482px) {
 	html {
 		padding: 0px;
-		
+		margin: 0px;
 	}
 
 	body {
 		padding: 10px;
 		margin: 0px;
-	
 	}
 
 	#navbar {
@@ -332,7 +331,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		margin-top: 30px;
-		opacity: 0.8;
+		opacity: 0.9;
 	}
 	
 	#navbar .menubar .menu {
@@ -345,35 +344,29 @@ body {
 	
 	#header {
 		margin: 0;
-		padding-top: 100px;
+		padding-top: 40px;
 		width: 100%;
+		height: auto;
 	}
 
 	#chatbox {
 		margin-top: 30px;
-		width: 95%;
-		height: 80%;
+		width: 100%;
+		height: 70%;
 	}
 
 	#chatbox .chat__top {
-		height: 8%;
+		height: 7%;
 	}
 
 	#chatbox .chat__container .chat__avatar {
-		width: 25%;
+		width: 20%;
 	}
 
 	#chatbox .chat__container .chat__text {
-		font-size: calc(var(--font-regular) * 1.2);
+		font-size: var(--font-regular);
 	}
 
 	#footer {
-		display: flex;
-		font-size: var(--font-small);
-		width: 80%;
-		flex-direction: column;
-		justify-content: flex-end;
-		margin-top: 25px;
-		margin-bottom: 15px;
-	}
+		display: none;
 }
