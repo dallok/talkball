@@ -360,7 +360,7 @@ body {
 
 	#chatbox .chat__container .chat__avatar {
 		width: 20%;
-		height: auto;
+		height: 90%;
 	}
 
 	#chatbox .chat__container .chat__text {
