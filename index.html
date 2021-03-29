@@ -1,83 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Talk Ball</title>
+		<meta name="description" content="Football things, Football phrases" />
+		<link rel="icon" href="img/favicon.png?" type="image/png" />
+		<script
+			src="https://kit.fontawesome.com/bce1a98f73.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<script src="main.js" defer></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Talk Ball</title>
-  <meta name="description" content="Football things, Football phrases" />
-  <link rel="icon" href="img/favicon.png?" type="image/png" />
-  <script src="https://kit.fontawesome.com/bce1a98f73.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="main.js" defer></script>
-</head>
+	<body>
+		<!-- Header -->
+		<section id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/title-logo.png" />
+				</div>
+				<img class="header__title" src="img/title-image.png" />
+			</div>
+		</section>
 
-<body>
+		<!-- Navbar -->
+		<nav id="navbar">
+			<ul class="menubar">
+				<li class="menu">
+					<button>
+						<i class="fas fa-beer"></i
+						><span class="menu__text">Today's Top Talk</span>
+					</button>
+				</li>
+				<li class="menu">
+					<button>
+						<i class="fas fa-random"></i
+						><span class="menu__text">Random Talk</span>
+					</button>
+				</li>
+				<li class="menu">
+					<button>
+						<i class="fas fa-calendar-alt"></i
+						><span class="menu__text">Match Schedules</span>
+					</button>
+				</li>
+				<li class="menu">
+					<button>
+						<i class="fas fa-comment"></i><span class="menu__text">Forum</span>
+					</button>
+				</li>
+			</ul>
 
-  <!-- Header -->
-  <section id="header">
-    <div class="header__container">
-      <div class="header__logo">
-        <img src="img/title-logo.png" />
-      </div>
-      <img class="header__title" src="img/title-image.png" />
-    </div>
-  </section>
-  <!-- Navbar -->
-  <section id="navbar">
-    <ul class="navbar__menu">
-      <li class="menu">
-        <button><i class="fas fa-beer"></i><span class="menu__text">Today's Top Talk</span></button>
-      </li>
-      <li class="menu">
-        <button><i class="fas fa-random"></i><span class="menu__text">Random Talk</span></button>
-      </li>
-      <li class="menu">
-        <button><i class="fas fa-calendar-alt"></i><span class="menu__text">Match Schedules</span></button>
-      </li>
-      <li class="menu">
-        <button><i class="fas fa-comment"></i><span class="menu__text">Forum</span></button>
-      </li>
-    </ul>
-  </section>
-  <section id="chatbox">
-    <div class="chat__top">
-      <i class="fas fa-times-circle"></i>
-      <i class="fas fa-minus-circle"></i>
-      <i class="fas fa-moon darkMode"></i>
-    </div>
-    <div class="chat__container">
-      <div class="chat first-chat">
-        <img src="img/avatar1.png" alt="chat-avatar" class="chat__avatar" />
-        <div class="chat__speechbubble">
-          <p class="chat__text">Lorem ipsum dolor sit amet consectetur adipisicing.<i class="fas fa-volume-up"></i></p>
-        </div>
-      </div>
-      <div class="chat">
-        <img src="img/avatar2.png" alt="chat-avatar" class="chat__avatar" />
-        <div class="chat__speechbubble">
-          <p class="chat__text">Lorem ipsum dolor sit amet consectetur adipisicing.<i class="fas fa-volume-up"></i></p>
-        </div>
-      </div>
-      <div class="chat last-chat">
-        <img src="img/avatar2.png" alt="chat-avatar" class="chat__avatar" />
-        <div class="chat__speechbubble">
-          <p class="chat__text">Lorem ipsum dolor sit amet consfectetur adipisicing.<i class="fas fa-volume-up"></i></p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Footer -->
-  <section id="footer">
-    <p class="footer__text">Copyright © 2021 TalkBall. All rights reserved.</p>
-  </section>
+			<!-- Toggle button -->
+			<button class="navbar__toggle-btn">
+				<i class="fas fa-bars"></i>
+			</button>
+		</nav>
 
-</body>
-
+		<section id="chatbox">
+			<div class="chat__top">
+				<i class="fas fa-times-circle"></i>
+				<i class="fas fa-minus-circle"></i>
+				<i class="fas fa-moon darkMode"></i>
+			</div>
+			<div class="chat__container">
+				<div class="chat first-chat">
+					<img src="img/avatar1.png" alt="chat-avatar" class="chat__avatar" />
+					<div class="chat__speechbubble">
+						<p class="chat__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing.<i
+								class="fas fa-volume-up"
+							></i>
+						</p>
+					</div>
+				</div>
+				<div class="chat">
+					<img src="img/avatar2.png" alt="chat-avatar" class="chat__avatar" />
+					<div class="chat__speechbubble">
+						<p class="chat__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing.<i
+								class="fas fa-volume-up"
+							></i>
+						</p>
+					</div>
+				</div>
+				<div class="chat">
+					<img src="img/avatar1.png" alt="chat-avatar" class="chat__avatar" />
+					<div class="chat__speechbubble">
+						<p class="chat__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing.<i
+								class="fas fa-volume-up"
+							></i>
+						</p>
+					</div>
+				</div>
+				<div class="chat last-chat">
+					<img src="img/avatar2.png" alt="chat-avatar" class="chat__avatar" />
+					<div class="chat__speechbubble">
+						<p class="chat__text">
+							Lorem ipsum dolor sit amet consfectetur adipisicing.<i
+								class="fas fa-volume-up"
+							></i>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<section id="footer">
+			<p class="footer__text">
+				Copyright © 2021 TalkBall. All rights reserved.
+			</p>
+		</section>
+	</body>
 </html>
