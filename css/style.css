@@ -75,15 +75,14 @@ p {
 
 html {
 	width: 100%;
-	height: 100%;
 	padding: 0 60px;
 }
 
 body {
-	font-family: "Inconsolata", monospace;
-	background: url("../img/home-background.png") center/cover no-repeat;
+	font-family: 'Inconsolata', monospace;
+	background: url('../img/home-background.png') center/cover no-repeat;
 	margin: 0;
-	height: 100%;
+	height: 95%;
 	cursor: default;
 	display: flex;
 	flex-direction: column;
@@ -91,42 +90,35 @@ body {
 	align-items: center;
 }
 
-/* Navbar */
-
 /* Header */
 #header {
-	margin-top: 50px;
+	margin: 50px 0 auto;
 	padding: 0;
-	width: 75%;
+	width: 85%;
 	max-width: 850px;
-	height: auto;
 }
 
 .header__container {
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	position: relative;
+	margin: 0 auto;
+	width: 85%;
 }
 
-.header__logo {
-	width: 15%;
-	position: relative;
-	left: 10px;
+#header__logo {
+	width: 20%;
+	flex-basis: 10%;
 }
 
-.header__logo img {
-	width: 120%;
-}
-
-.header__logo img:hover {
+#header__logo:hover {
 	transform: rotate(20deg);
 	transition: all var(--animation-duration) ease;
 }
 
-.header__title {
-	width: 85%;
+#header__title {
+	flex-basis: 90%;
+	width: 95%;
+	height: 100%;
 }
 
 /* Menu */
@@ -182,18 +174,18 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	width: 80%;
-	height: 55%;
 }
 
 .chat__top {
-	background-color: skyblue;
+	background-color: #9ddfd3;
 	width: 100%;
-	height: 10%;
+	height: 8%;
 	display: flex;
 	padding: 10px 5px;
 	align-items: center;
 	box-shadow: 10px 10px 6px -6px #777;
 	border: solid 1px var(--color-black);
+	border-radius: 10px 10px 0 0;
 }
 
 .chat__top i {
@@ -209,17 +201,18 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
-	height: 90%;
+	height: 92%;
 	margin: 0;
 	padding: 10px;
-	background-color: #fefefe;
+	background-color: #fcecdd;
 	box-shadow: 10px 10px 6px -6px #777;
 	border: solid 1px var(--color-black);
 	overflow-y: scroll;
 }
 
 .dark {
-	background-color: var(--color-black);
+	background-color: #1b1a17;
+	opacity: 0.9;
 }
 
 .chat {
@@ -279,7 +272,7 @@ body {
 }
 
 #footer::before {
-	content: "";
+	content: '';
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
@@ -293,7 +286,6 @@ body {
 	font-size: var(--font-regular);
 }
 
-/* For below 768px screen width */
 @media (max-width: 482px) {
 	html {
 		padding: 0px;
@@ -371,9 +363,5 @@ body {
 	#chatbox .chat__container .chat__speechbubble {
 		width: 60%;
 		height: 90%;
-	}
-
-	#footer {
-		display: none;
 	}
 }
