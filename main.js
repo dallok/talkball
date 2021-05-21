@@ -1,6 +1,6 @@
 "use strict";
 
-// Toggle button control for mobile version //
+// Toggle button control for mobile version 
 const navbarMenu = document.querySelector(".menubar")
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
@@ -8,7 +8,7 @@ navbarToggleBtn.addEventListener("click", () => {
 });
 
 
-// Chatbox Darkmode Control //
+// Chatbox Darkmode Control 
 const darkModeBtn = document.querySelector(".darkMode");
 const chatContainer = document.querySelector(".chat__container")
 
@@ -19,3 +19,11 @@ darkModeBtn.addEventListener("click", () => {
     chatContainer.classList.add("dark");
   }
 })
+
+// Random Talk Modal Control
+var myModal = document.getElementById('myModal');
+var myInput = document.getElementById('myInput');
+
+myModal.addEventListener('shown.bs.modal', function () {
+	myInput.focus();
+});

@@ -211,7 +211,7 @@ body {
 }
 
 .dark {
-	background-color: #1b1a17;
+	background-color: var(--color-black);
 	opacity: 0.9;
 }
 
